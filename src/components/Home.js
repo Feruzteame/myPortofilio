@@ -2,7 +2,6 @@ import React from "react";
 import { TypeAnimation } from 'react-type-animation';
 import ReactCardFlip from 'react-card-flip';
 
-import SocialMedia from './SocialMedia';
 import Nav from './Nav';
 import Footer from './Footer';
 import MyPhoto from '../image/myPhoto.png';
@@ -22,14 +21,18 @@ class Home extends React.Component{
   }
   render() {
     return(
-      <div>
+      <div className='
+        flex flex-col
+        gap-10
+        font-mono
+      '>
         <Nav />
-        <div className='flex font-mono'>
+        <div>
           <div className='
             flex flex-col
             justify-start items-center
-            gap-10
-            w-full h-auto
+            gap-10 sm:p-0
+            w-full h-auto sm:w-[100%]
           '>
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
               <div>
@@ -67,7 +70,6 @@ class Home extends React.Component{
               w-[250px] h-[60px]
               text-3xl
               border-double border-4 border-[#D21F3C] rounded
-              
             '>
               <p className='
                 h-full w-full
@@ -78,7 +80,12 @@ class Home extends React.Component{
               </p>
               <p className='bg-white p-2'>TEAME</p>
             </div>
-            <TypeAnimation
+            <div className='
+              flex justify-center
+              md:w-[50%] w-[90%] h-[90px] md:h-auto
+              text-center
+            '>
+              <TypeAnimation
               sequence={[
                 'Web ',
                 1000,
@@ -89,16 +96,9 @@ class Home extends React.Component{
               wrapper="div"
               cursor={ true }
               repeat={ 0 }
-              style={{
-                fontSize: '20px',
-                width: '50%',
-                height: 'auto',
-                minHeight: '100px',
-                textAlign: 'center',
-                fontWeight: 'light',
-              }}
-            />
-            <div className='flex flex-wrap gap-5 w-[80%] items-center justify-center'>
+              />
+            </div>
+            <div className='flex flex-wrap gap-5 w-[80%] md:w-[60%] items-center justify-center'>
               <img src='https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white'  alt='Feruz Teame' className='h-6' />
               <img src='https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white' alt='Feruz Teame' className='h-6' />
               <img src='https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E' alt='Feruz Teame' className='h-6' />
@@ -110,7 +110,6 @@ class Home extends React.Component{
               <img src='https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white'  alt='Feruz Teame' className='h-6' />
             </div>
           </div>
-          <SocialMedia/>
         </div>
         <Footer />
       </div>
