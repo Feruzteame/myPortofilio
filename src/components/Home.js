@@ -75,10 +75,11 @@ class Home extends React.Component{
                 h-full w-full
                 m-0 p-2
                 bg-[#D21F3C] text-white
-              '>
+              '
+              id='firstName'>
                 FERUZ
               </p>
-              <p className='bg-white p-2'>TEAME</p>
+              <p id='lastName' className='bg-white p-2'>TEAME</p>
             </div>
             <div className='
               flex justify-center

@@ -35,11 +35,6 @@ const Footer = () => {
             Keep in touch
           </a>
         </li>
-        <li className='flex gap-1' >
-          <a href='../image/cv.pdf' download='feruzteame' className='underline cursor-grab hover:text-[#D21F3C]'>
-            Download CV
-          </a>
-        </li>
       </ul>
     </div>
   )
