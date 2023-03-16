@@ -6,7 +6,7 @@ const Footer = () => {
   return(
     <div className='
       flex flex-col items-center
-      bg-[#D21F3C] md:bg-transparent
+      bg-[#FFA101] md:bg-transparent
       gap-6 p-4
       font-mono
     '>
@@ -15,13 +15,13 @@ const Footer = () => {
         w-full
         gap-2 md:px-10
       '>
-        <a href='https://github.com/Feruzteame' target="_blank">
+        <a href='https://github.com/Feruzteame' target="_blank" rel="noreferrer">
           <img src={ Github } alt='github' className='h-10 w-10 cursor-grab hover:scale-150' />
         </a>
-        <a href='https://linkedin.com/in/feruz-teame' target="_blank">
+        <a href='https://linkedin.com/in/feruz-teame' target="_blank" rel="noreferrer">
           <img src={ Linkedin } alt='linkedin' className='h-8 w-8 cursor-grab hover:scale-150' />
         </a>
-        <a href='https://medium.com/@feruzTeame' target="_blank">
+        <a href='https://medium.com/@feruzTeame' target="_blank" rel="noreferrer">
           <img src={ Medium } alt='medium' className='h-12 w-12 cursor-grab hover:scale-150' />
         </a>
       </div>
@@ -31,7 +31,7 @@ const Footer = () => {
         text-white
       '>
         <li className='flex gap-1'>
-          <a href='mailto:teamefitwi@gmail.com' target='_blank' className='underline cursor-grab hover:text-[#D21F3C]'>
+          <a href='mailto:teamefitwi@gmail.com' target='_blank'rel="noreferrer"  className='underline cursor-grab hover:text-[#D21F3C]'>
             Keep in touch
           </a>
         </li>

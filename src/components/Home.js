@@ -23,7 +23,7 @@ class Home extends React.Component{
     return(
       <div className='
         flex flex-col
-        gap-10
+        gap-10 lg:gap-10 md:gap-20
         font-mono
       '>
         <Nav />
@@ -31,7 +31,7 @@ class Home extends React.Component{
           <div className='
             flex flex-col
             justify-start items-center
-            gap-10 sm:p-0
+            gap-10 lg:gap-10 md:gap-20 sm:p-0
             w-full h-auto sm:w-[100%]
           '>
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
@@ -43,7 +43,7 @@ class Home extends React.Component{
                   text-center
                   rounded-full
                   drop-shadow-[0_0_20px_black]
-                  border-double border-4 border-[#D21F3C]
+                  border-double border-4 border-[#FFA101]
                   cursor-grab
                 '/>
               </div>
@@ -54,9 +54,9 @@ class Home extends React.Component{
                 justify-center items-center
                 w-[200px] h-[200px]
                 p-6
-                text-center text-white
+                text-center
                 drop-shadow-[0_0_20px_black]
-                bg-[#D21F3C]
+                bg-[#FFA101]
                 font-medium
                 rounded-full border-double border-4 border-white
                 cursor-grab
@@ -69,12 +69,12 @@ class Home extends React.Component{
               gap-2
               w-[250px] h-[60px]
               text-3xl
-              border-double border-4 border-[#D21F3C] rounded
+              border-double border-4 border-[#FFA101] rounded
             '>
               <p className='
                 h-full w-full
                 m-0 p-2
-                bg-[#D21F3C] text-white
+                bg-[#FFA101] text-white
               '
               id='firstName'>
                 FERUZ
