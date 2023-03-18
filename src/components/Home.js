@@ -5,6 +5,8 @@ import ReactCardFlip from 'react-card-flip';
 import Nav from './Nav';
 import Footer from './Footer';
 import MyPhoto from '../image/myPhoto.png';
+import Project from './Project';
+import ResponsiveNav from './ResponsiveNav'
 
 class Home extends React.Component{
   constructor() {
@@ -23,15 +25,17 @@ class Home extends React.Component{
     return(
       <div className='
         flex flex-col
-        gap-10 lg:gap-10 md:gap-20
+        lg:gap-2
         font-mono
+        h-[100%]
       '>
         <Nav />
+        <ResponsiveNav />
         <div>
           <div className='
             flex flex-col
             justify-start items-center
-            gap-10 lg:gap-10 md:gap-20 sm:p-0
+            gap-16 lg:gap-10 md:gap-20 mt-10
             w-full h-auto sm:w-[100%]
           '>
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
@@ -43,7 +47,7 @@ class Home extends React.Component{
                   text-center
                   rounded-full
                   drop-shadow-[0_0_20px_black]
-                  border-double border-4 border-[#FFA101]
+                  border-double border-4 border-[#3E8DE3]
                   cursor-grab
                 '/>
               </div>
@@ -56,7 +60,7 @@ class Home extends React.Component{
                 p-6
                 text-center
                 drop-shadow-[0_0_20px_black]
-                bg-[#FFA101]
+                bg-[#3E8DE3]
                 font-medium
                 rounded-full border-double border-4 border-white
                 cursor-grab
@@ -69,22 +73,15 @@ class Home extends React.Component{
               gap-2
               w-[250px] h-[60px]
               text-3xl
-              border-double border-4 border-[#FFA101] rounded
+              border-double border-4 border-[#3E8DE3] rounded
             '>
-              <p className='
-                h-full w-full
-                m-0 p-2
-                bg-[#FFA101] text-white
-              '
-              id='firstName'>
-                FERUZ
-              </p>
-              <p id='lastName' className='bg-white p-2'>TEAME</p>
+              <p className='h-full w-full m-0 p-2 bg-[#3E8DE3] text-white'> FERUZ </p>
+              <p className='bg-transparent p-2 text-[#3E8DE3]'>TEAME</p>
             </div>
             <div className='
               flex justify-center
-              md:w-[50%] w-[90%] h-[90px] md:h-auto
-              text-center
+              md:w-[50%] w-[90%] h-[50px] md:h-auto
+              m-2 text-center
             '>
               <TypeAnimation
               sequence={[
@@ -99,7 +96,7 @@ class Home extends React.Component{
               repeat={ 0 }
               />
             </div>
-            <div className='flex flex-wrap gap-5 w-[80%] md:w-[60%] items-center justify-center'>
+            <div className='flex flex-wrap m-6 gap-5 w-[80%] md:w-[60%] items-center justify-center'>
               <img src='https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white'  alt='Feruz Teame' className='h-6' />
               <img src='https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white' alt='Feruz Teame' className='h-6' />
               <img src='https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E' alt='Feruz Teame' className='h-6' />
@@ -112,6 +109,7 @@ class Home extends React.Component{
             </div>
           </div>
         </div>
+        <div className='hidden md:flex'> <Project/></div>
         <Footer />
       </div>
     )

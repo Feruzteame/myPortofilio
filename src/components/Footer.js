@@ -6,7 +6,7 @@ const Footer = () => {
   return(
     <div className='
       flex flex-col items-center
-      bg-[#FFA101] md:bg-transparent
+      bg-[#3E8DE3] md:bg-transparent
       gap-6 p-4
       font-mono
     '>
@@ -25,17 +25,6 @@ const Footer = () => {
           <img src={ Medium } alt='medium' className='h-12 w-12 cursor-grab hover:scale-150' />
         </a>
       </div>
-      <ul className='
-        flex md:hidden
-        gap-10
-        text-white
-      '>
-        <li className='flex gap-1'>
-          <a href='mailto:teamefitwi@gmail.com' target='_blank'rel="noreferrer"  className='underline cursor-grab hover:text-[#D21F3C]'>
-            Keep in touch
-          </a>
-        </li>
-      </ul>
     </div>
   )
 }
